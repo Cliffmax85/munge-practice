@@ -122,11 +122,14 @@ test('getTotalOfEachGender', (expect) => {
 });
 
 test('getGenderBreakdownOfFordOwners', (expect) => {
-    const expected = 50;
+    const expected = {
+        'Female': 1,
+        'Male': 2
+    };
 
     const actual = getGenderBreakdownOfFordOwners(customers);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
 skip('getGenderBreakdownOfEachCar', (expect) => {
